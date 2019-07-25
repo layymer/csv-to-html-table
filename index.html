@@ -48,10 +48,11 @@
     <script type="text/javascript">
       function format_link(link){
         if (link)
+          if (link="N/A")
+            exit;
+         else
           return "<a href='" + link + "' target='_blank'>" + "Перейти за посиланням" + "</a>";
-        else if (link == "N/A")
-          return "-"
-        else
+         else
           return "";
       }
 var collumn_arr =[3, 4];
