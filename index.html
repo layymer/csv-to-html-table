@@ -52,14 +52,14 @@
         else
           return "";
       }
-
+var collumn_arr =[3, 4];
       CsvToHtmlTable.init({
         csv_path: 'data/reestr.csv',
         element: 'table-container', 
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": false},
-        custom_formatting: [[(3,4), format_link]]
+        custom_formatting: [[collumn_arr, format_link]]
       });
     </script>
   </body>
