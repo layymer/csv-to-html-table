@@ -50,13 +50,7 @@
 
 var reestr_format = 100;
  csv_url=getAllUrlParams().csv_url;
-  switch (csv_url) {
-    case "0":  reestr_format = "[[3, format_link],[4, format_link]]";
-             break;
-    case "1":  reestr_format = 300;
-             break;
-  }
-      
+ 
       
       
       
@@ -82,6 +76,15 @@ var reestr_format = 100;
           return "";
        }
 
+       switch (csv_url) {
+    case "0":  reestr_format = [[3, format_link],[4, format_link]];
+             break;
+    case "1":  reestr_format = 300;
+             break;
+  }
+      
+      
+      
      
       CsvToHtmlTable.init({
         csv_path: ('data/' + getAllUrlParams().csv_url + '.csv'),
