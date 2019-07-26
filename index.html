@@ -48,9 +48,18 @@
 
     <script type="text/javascript">
  
-  
+  switch (getAllUrlParams().csv_url) {
+    case 0:  reestr_format = "[[3, format_link],[4, format_link]]";
+             break;
+    case 1:  reestr_format = "[[6, format_email]]";
+             break;
+  }
+      
+      
+      
+      
 
-      csv_addr = 'data/n1.csv';
+     
       function format_link(link){
         if (link)
           if (link=="N/A")
@@ -78,7 +87,7 @@
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": false},
-        custom_formatting: [[3, format_link],[4, format_link]]
+        custom_formatting: reestr_format
       });
     </script>
   </body>
