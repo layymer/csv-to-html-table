@@ -57,6 +57,14 @@
          else
           return "";
       }
+            function format_email(email){
+        if (email)
+          if (email=="N/A")
+            return "";
+         else
+          return "<a href='mailto:" + email + "' target='_blank'>" + email + "</a>";
+         else
+          return "";
 
       CsvToHtmlTable.init({
         csv_path: csv_addr
