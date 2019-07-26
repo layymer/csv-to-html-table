@@ -43,9 +43,11 @@
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
     <script type="text/javascript" src="js/csv_to_html_table.js"></script>
+    
 
 
     <script type="text/javascript">
+      csv_addr = 'data/reestr.csv';
       function format_link(link){
         if (link)
           if (link=="N/A")
@@ -57,7 +59,7 @@
       }
 
       CsvToHtmlTable.init({
-        csv_path: 'data/reestr.csv',
+        csv_path: csv_addr,
         element: 'table-container', 
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
