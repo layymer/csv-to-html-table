@@ -68,6 +68,16 @@ Example:
   });
 </script>
 ```
+if u need make some column invisible use that:
+```
+<script>
+
+    datatables_options: {"paging": false,
+                             "columnDefs": [{"targets": [2, 3], "visible": false }]},
+  });
+</script>
+
+```
 
 Note that you should take care about HTML escaping to avoid [XSS](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)) or broken layout.
 jQuery has a nice function [text()](https://api.jquery.com/text/) which safely escapes HTML from value.
